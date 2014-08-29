@@ -3,7 +3,7 @@
 <%= form_for @product do |f| %>
 	<p><%=f.label "Name" %><br><%=f.text_field "name"%></p>
 	<p><%=f.label "Description" %><br><%=f.text_field "description"%></p>
-	<p><%=f.label "Price" %><br><%=f.text_field "price_in_cents"%></p>
+	<p><%=f.label "Price" %><br><%=f.text_field "formatted_price"%></p>
 	<p><%= f.file_field "image" %></p>
 	<p><%=submit_tag "Save" %></p>
 <%end%>
