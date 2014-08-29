@@ -10,6 +10,15 @@
 <div class ="nav">
 <%= link_to "Home", "/" %> | <%= link_to "New Product", "/products/new" %> | <%= link_to "Top Products", "/products/new" %> 
 </div>
+
+<% if flash[:notice] %>
+      <p id="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p id="alert"><%= flash[:alert] %></p>
+<% end %>
+
+
 <%= yield %>
 
 </body>
