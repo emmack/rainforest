@@ -1,0 +1,14 @@
+
+<div class="gridwrapper">
+	
+			<% @products.each do |product| %>
+				<div class="tile">
+					<div class="tileinner">
+						<%= link_to image_tag(product.image), "/products/#{product.id}" %>
+			
+					</div>
+				</div>
+			<%end%>
+</div>
+
+

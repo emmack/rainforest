@@ -1,0 +1,12 @@
+<h1> Edit </h1>
+<p> <%= link_to "back", @product %> </p>
+<%= form_for @product do |f| %>
+	<p><%= f.label "Name" %><br><%= f.text_field "name"%></p>
+	<p><%= f.label "Description" %><br><%= f.text_field "description"%></p>
+	<p><%= f.label "price" %><br><%= f.text_field "price_in_cents"%></p>
+  	<p><%= f.file_field "image" %></p>
+
+	<p><%= submit_tag "Save" %></p>
+<%end%>
+
+
