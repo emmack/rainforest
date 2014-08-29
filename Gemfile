@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 gem "quiet_assets"
 gem "pry"
 gem 'carrierwave'
+gem 'bcrypt-ruby', :require => 'bcrypt'
+
