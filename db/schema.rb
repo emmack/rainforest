@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140829185305) do
+ActiveRecord::Schema.define(version: 20140902195539) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "likes", force: true do |t|
+    t.integer  "likes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "like"
+    t.integer  "product_id"
+    t.integer  "user_id"
+  end
 
   create_table "products", force: true do |t|
     t.string   "name"
@@ -20,6 +36,26 @@ ActiveRecord::Schema.define(version: 20140829185305) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.integer  "category_id"
+    t.integer  "likes"
+    t.integer  "rating_id"
+  end
+
+  create_table "ratings", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "rating"
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.integer  "average"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.text     "comment"
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
@@ -27,6 +63,8 @@ ActiveRecord::Schema.define(version: 20140829185305) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "avatar"
   end
 
 end

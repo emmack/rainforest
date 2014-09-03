@@ -1,12 +1,26 @@
 Rails.application.routes.draw do
 
 
-  root 'products#index'
 
+root :to => "products#index"
   resources :products 
   resources :comments 
-  resources :users, only: [:new, :create]
+  resources :users
+  resources :tops, only: [:show]
   resources :sessions, only: [:new, :create, :destroy]
+
+
+
+  resources :products do
+    resources :reviews, only: [:show, :create, :destroy]
+    resources :ratings, only: [:index, :show, :create, :destroy]
+
+  end
+
+  resources :categories do
+    resources :products
+  end
+
 
 
  

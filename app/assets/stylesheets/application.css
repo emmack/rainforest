@@ -13,3 +13,189 @@
  *= require_tree .
  *= require_self
  */
+
+#headwrapper {
+	background-color: white;
+height: 140px;
+}
+.userinfo {
+
+transition: all 0.2s ease-in-out;
+padding: -13px 5px 10px 5px;
+font-family: "couture";
+font-weight: 500;
+font-style: normal;
+font-size: 16px;
+letter-spacing: 2px;
+text-transform: none;
+color: #0c112f;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+text-align: right;
+margin-right: 59px;
+margin-top: 0px;
+padding-top: 30px;
+}
+
+.userinfo a {
+	color:#667618;
+}
+
+
+body {
+	padding: 0px 0 0 0;
+	margin: 0 auto ;
+	font-size: 13px;
+	text-align: center;	
+	
+}
+
+
+div#preload { display: none; }
+	
+/* Header */
+
+#headerwrapper {
+	width: 100%;
+	background-color: #f7f8f4;
+	margin: 0 auto;
+	top: 0; left: 0;
+	text-align: center;
+	z-index: 10000;
+	position: relative;
+	
+			
+}
+
+#header {
+margin-top: 0px;
+
+position: relative;
+
+max-width: 100%;
+
+background-color: none;
+
+margin-left: 0px;
+
+		}
+			
+	.logo {
+width: 700px;
+
+margin-left: -80px;
+display: inline-block;
+position: absolute;
+left: 0;
+}
+
+#newproduct {
+	
+	
+	background-color:none;
+	float: right;
+	margin: 47px 50px 0px 0px;
+	padding:12px 5px 10px 5px;
+	position: relative;	
+	font-family: 'Archer A', 'Archer B', "chaparral pro", Georgia; font-weight: 500; font-style: normal;
+	font-size:16px;
+	letter-spacing:3px;
+	text-transform:none;
+	border-bottom: 1px solid #adb6b8;
+	border-top: 1px solid #adb6b8;
+	color: #adb6b8;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	}
+
+.nav {
+
+
+padding-top: 39px;
+display: inline-block;
+position: absolute;
+right: 52px;
+transition: all 0.2s ease-in-out;
+padding: -13px 5px 10px 5px;
+font-family: "couture";
+font-weight: 500;
+font-style: normal;
+font-size: 20px;
+letter-spacing: 2px;
+text-transform: none;
+color: #0c112f;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+text-align: right;
+
+}
+	
+.nav a {
+padding-right: 10px;
+padding-left: 10px;
+	text-decoration: none; 
+	color: #0c112f;
+		-webkit-transition: all 0.2s ease-in-out;
+	 	-moz-transition: all 0.2s ease-in-out;
+	 	-o-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+
+
+.nav a:hover {
+	color:#667618;
+}
+
+
+	
+	
+#newproduct:hover {
+
+		border-bottom: 1px solid black;
+		border-top: 1px solid black;
+		padding:12px 5px 10px 5px;
+		color: black;
+		}	
+	
+#home {
+		height: 40px; 
+		width:40px;
+		background-image:url('t.png');
+		background-position: center;
+		background-color:none;
+		background-repeat: no-repeat;
+		float: left;
+		border-bottom: 1px solid #adb6b8;
+		border-top: 1px solid #adb6b8;
+		margin: 47px 0px 0px -3px;
+		position: relative;	
+			-webkit-transition: all 0.2s ease-in-out;
+			-moz-transition: all 0.2s ease-in-out;
+			-o-transition: all 0.2s ease-in-out;
+			-ms-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+		}
+		
+#home:hover {
+	
+		background-image:url('th.png');
+		border-bottom: 1px solid black;
+		border-top: 1px solid black;
+				}	
+				
+
+
+body {
+	background-color:#0c112f;
+
+}

@@ -1,3 +1,50 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.userinfo
+{
+font-family:'Archer A', 'Archer B', "chaparral pro", Georgia;
+font-size: 15px;
+text-align: right;
+color: black;
+margin-right: 25px;
+margin-bottom: 0px;
+}
+
+
+.profile
+{
+font-family: 'Archer A', 'Archer B', "chaparral pro", Georgia;
+font-size: 20px;
+text-align: left;
+color: black;
+margin-right: auto;
+margin-bottom: 0px;
+width: 500px;
+margin-left: auto;
+
+}
+
+.profile img 
+{
+width:200px;
+
+}
+
+.subject{
+font-family: 'Archer A', 'Archer B', "chaparral pro", Georgia;
+font-size: 20px;
+font-weight: bolder;
+float: left;
+
+}
+
+
+.profile_info{
+
+}
+
+.profile_img{
+	
+}

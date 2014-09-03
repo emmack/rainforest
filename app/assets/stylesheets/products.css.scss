@@ -3,20 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.cover_img {
+width: 100%;
+margin-top: 100px;
+z-index: -100;
+}
 
-body {
-	background-color:#0c112f;
+.back_link{
+	text-align: center;
+	font-family: "Avenir-Medium"
 	
 }
 
-.camera {
-width: 300px;
-margin-left: auto;
-margin-right: auto;
+
+.product {
+	
+}
+.product_img{
+	float: left;
+margin-left: 0px;
+margin-right: 0px;
+width: 400px;
+height: auto;
 }
 
+.product_info{
+	
+margin-left: 0px;
+margin-right: 0px;
+}
+
+.product_options{
+	
+margin-left: 0px;
+margin-right: 0px;
+}
+
+
+
 img {
-width: 300px;
+width: 60%;
 }
 
 .header {
@@ -27,22 +53,8 @@ width: 300px;
 
 }
 
-.nav {
-text-decoration: none;
-text-align: center;
-font-family: "Peach Milk";
-font-size: 30px;
-color: rgba(88, 88, 88, 1);
-
-overflow: hidden;
-/* margin: 10px; */
 
 
-}
-
-.new_form{
-	
-}
 
 .log_in {
 	position:relative;
@@ -67,12 +79,14 @@ color: rgba(88, 88, 88, 1);
 
 .gridwrapper {
 overflow: hidden;
-margin: 10px;
-margin-top: 40px;
-
+/* margin: 10px; */
+margin-top: 20px;
 background-color: rgba(255, 255, 255, 0.1);
 padding: 20px;
-border-radius: 50px;
+/* border-radius: 50px; */
+max-width: 1275px;
+margin-right: auto;
+margin-left: auto;
 	}
 
 .tile{
@@ -89,11 +103,15 @@ border-radius: 50px;
      top: 10px;
      bottom: 10px;
      overflow: hidden;
+
 }
 
 .tileInner image_link {
       width: 100%;
     }
+.tileInner img {
+	width: 200px;
+}
 
 .thumbnail {
 	
@@ -107,19 +125,38 @@ border-radius: 50px;
 
 h1{
 
-	font-family: "Peach Milk";
+	font-family: "couture";
 font-size: 30px;
 text-align: center;
-color: white;
+
+color:#667618;
+margin-top: 25px;
+margin-bottom: 25px; 
 }
 
 
 p{
-	font-family:"helvetica";
-	font-size:15px;
-	text-align:center;
-	color:white;
+font-family: "Avenir-Medium";
+font-size: 18px;
+text-align: left;
+color: #667618;
 
+}
+
+form{
+width: 600px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.editing {
+	width: 600px;
+padding-left: 171px;
+padding-right: 0px;
+}
+
+.input{
+	width: 158px;
 }
 
 .picture {
@@ -131,4 +168,8 @@ p{
 .picture.liked {
   .like { display: none; }
   .unlike { display: inline-block; }
+}
+
+.rating_form{
+	width:100%;
 }

@@ -1,0 +1,14 @@
+    <h1> <%= @category.name %></h1>
+<div class="gridwrapper">
+	
+			<% @category.products.order("created_at desc").each do |product| %>
+				<div class="tile">
+					<div class="tileinner">
+						<%= link_to image_tag(product.image), "/products/#{product.id}" %>
+
+					</div>
+				</div>
+			<%end%>
+</div>
+
+

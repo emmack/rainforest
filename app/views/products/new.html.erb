@@ -1,12 +1,41 @@
 <h1> New Product </h1>
 
+ 
 <%= form_for @product do |f| %>
-	<p><%=f.label "Name" %><br><%=f.text_field "name"%></p>
-	<p><%=f.label "Description" %><br><%=f.text_field "description"%></p>
-	<p><%=f.label "Price" %><br><%=f.text_field "price_in_cents"%></p>
-	<p><%= f.file_field "image" %></p>
-	<p><%=submit_tag "Save" %></p>
-<%end%>
+<table class ="editing">
+ <tr>
+	<td><p><%=f.label "Name" %></p></td>
+  <td><p><%=f.text_field "name"%></p></td>
+</tr>
+<tr>
+	<td><p><%=f.label "Description" %></p></td>
+  <td><p><%=f.text_field "description"%></p></td>
+</tr>
+<tr>
+
+	<td><p><%=f.label "Price" %></p></td>
+  <td><p><%=f.text_field "price_in_cents"%></p></td>
+</tr>
+<tr>
+	<td><p><%=f.label "Category" %></p></td>
+  <td><p><%= f.collection_select :category_id, Category.all, :id, :name, include_blank: true  %></p></td>
+  </tr>
+  <tr>
+
+	<td><p><%=f.label "Image" %></p></td>
+  <td><p><%= f.file_field "image" %></p></td>
+  </tr>
+  <tr>
+<td></td>
+	<td><p><%=submit_tag "Save" %></p></td>
+  </tr>
+  </table>
+  <%end%>
+
+
+
+
+
 		
 
 <%= form_for(@product) do |f| %>

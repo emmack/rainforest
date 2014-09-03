@@ -1,0 +1,11 @@
+<h1> Categories</h1>
+
+<div class ="categories">
+
+
+<% @categories.each do |category| %>
+	<%= link_to category.name, "/categories/#{category.id}" %><br> 
+<%end%>
+
+</div>
+

@@ -42,3 +42,6 @@ gem "pry"
 gem 'carrierwave'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
+group :development, :test do
+  gem 'rspec-rails'
+end

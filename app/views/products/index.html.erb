@@ -1,14 +1,18 @@
 
-<div class="gridwrapper">
-	
-			<% @products.each do |product| %>
-				<div class="tile">
-					<div class="tileinner">
-						<%= link_to image_tag(product.image), "/products/#{product.id}" %>
-			
-					</div>
-				</div>
-			<%end%>
-</div>
+<h1> Top Rated Products </h1>
+  <div class="gridwrapper">
 
+
+
+  <%@products.each do |product| %>
+    <% @avg_rating = product.ratings.average(:rating) %>
+    <% unless @avg_rating < 3 %>
+      <div class="tile">
+      <div class="tileinner">
+      <%= link_to image_tag(product.image), "/products/#{product.id}" %>
+      </div>
+      </div>
+    <%end%>
+  <%end%>
+  </div>
 
