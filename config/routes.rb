@@ -9,8 +9,10 @@ root :to => "products#index"
   resources :sessions, only: [:new, :create, :destroy]
 
 
-
   resources :products do
+ collection do
+    get 'search'
+  end
     resources :reviews, only: [:show, :create, :destroy]
     resources :ratings, only: [:index, :show, :create, :destroy]
 
@@ -20,9 +22,6 @@ root :to => "products#index"
     resources :products
   end
 
-  resources :searches do
-   resources :products, only: [:index]
-  end
 
  
   # The priority is based upon order of creation: first created -> highest priority.

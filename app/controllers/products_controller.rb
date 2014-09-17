@@ -2,9 +2,21 @@ class ProductsController < ApplicationController
 
     def index
         @products = Product.all
-       
     end
 
+    def search 
+        @products = if params[:search]
+            Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%").page(params[:page])
+        else
+            Product.order('products.created_at DESC').page(params[:page])
+        end
+        
+        respond_to do |format|
+            format.html
+            format.js
+        end
+    end
+    
     def show
         @product = Product.find(params[:id])
         if current_user
