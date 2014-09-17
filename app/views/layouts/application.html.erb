@@ -2,54 +2,56 @@
 <html>
 <head>
 
-  <title>Rainforest</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rainforest</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>  
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>  
 </head>
 
 
 <body>
-<div id="headwrapper">
-<p class="userinfo">
+    <div id="headwrapper">
+        <p class="userinfo">
 
-      <% if current_user %>
-        Signed in as <%= current_user.email %>. | <%= link_to "Profile", current_user %> | <%= link_to "Log out", session_path("current"), :method => :delete %>
-           
-      <% else %>
-        <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-      <% end %>
-</p>
-
+            <% if current_user %>
+                Signed in as <%= current_user.email %>. | <%= link_to "Profile", current_user %> | <%= link_to "Log out", session_path("current"), :method => :delete %>
+            <% else %>
+                <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+            <% end %>
+        </p>
 
 
-    <div id="header">
-        <div class ="logo">
-            <img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10620670_10152602781410342_3641869258940417417_n.jpg?oh=d2d0b13d7b118643fe2ba3622831305d&oe=547CFCCF&__gda__=1415683801_1da383b1ff52e49219de05f6f903b8ad">
-        </div>
 
-        <div class ="nav">
-            <%= link_to "Home", "/" %>  <%= link_to "New Product", "/products/new" %>  <%= link_to "Categories", "/categories/" %> 
+        <div id="header">
+            <div class ="logo">
+                Rainforest
+            </div>
+            <div class ="nav">
+                <%= link_to "Home", "/" %>  <%= link_to "New Product", "/products/new" %>  <%= link_to "Categories", "/categories/" %> 
+
+                <%=form_tag products_path, method: :get, authentication: false, id:'search-form' do %>
+<%=text_field_tag :search, params[:search]%>
+<%= submit_tag 'Search'%>
+<%end%>
+
+
+            </div>
         </div>
     </div>
-</div>
 
 
-<% if flash[:notice] %>
-      <p id="notice"><%= flash[:notice] %></p>
+    <% if flash[:notice] %>
+        <p id="notice"><%= flash[:notice] %></p>
     <% end %>
     <% if flash[:alert] %>
-      <p id="alert"><%= flash[:alert] %></p>
-<% end %>
+        <p id="alert"><%= flash[:alert] %></p>
+    <% end %>
 
 
-<%= yield %>
-
-
-
+    <%= yield %>
 </body>
 </html>

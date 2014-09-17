@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
 
-
 root :to => "products#index"
   resources :products 
   resources :comments 
   resources :users
-  resources :tops, only: [:show]
+
   resources :sessions, only: [:new, :create, :destroy]
 
 
@@ -21,7 +20,9 @@ root :to => "products#index"
     resources :products
   end
 
-
+  resources :searches do
+   resources :products, only: [:index]
+  end
 
  
   # The priority is based upon order of creation: first created -> highest priority.

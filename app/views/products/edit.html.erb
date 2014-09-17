@@ -2,34 +2,32 @@
 
 
 <%= form_for @product do |f| %>
-<table class ="editing">
- <tr>
-	<td><p><%=f.label "Name" %></p></td>
-  <td><p><%=f.text_field "name"%></p></td>
-</tr>
-<tr>
-	<td><p><%=f.label "Description" %></p></td>
-  <td><p><%=f.text_field "description"%></p></td>
-</tr>
-<tr>
-
-	<td><p><%=f.label "Price" %></p></td>
-  <td><p><%=f.text_field "price_in_cents"%></p></td>
-</tr>
-<tr>
-	<td><p><%=f.label "Category" %></p></td>
-  <td><p><%= f.collection_select :category_id, Category.all, :id, :name, include_blank: true  %></p></td>
-  </tr>
-  <tr>
-
-	<td><p><%=f.label "Image" %></p></td>
-  <td><p><%= f.file_field "image" %></p></td>
-  </tr>
-  <tr>
-<td></td>
-	<td><p><%=submit_tag "Save" %></p></td>
-  </tr>
-  </table>
-  <%end%>
+    <table class ="editing">
+        <tr>
+    	   <td><p><%=f.label "Name" %></p></td>
+           <td><p><%=f.text_field "name"%></p></td>
+        </tr>
+        <tr>
+    	   <td><p><%=f.label "Description" %></p></td>
+           <td><p><%=f.text_field "description"%></p></td>
+        </tr>
+        <tr>
+    	   <td><p><%=f.label "Price" %></p></td>
+           <td><p><%=f.text_field "price_in_cents"%></p></td>
+        </tr>
+        <tr>
+            <td><p><%=f.label "Category" %></p></td>
+            <td><p><%= f.collection_select :category_id, Category.all, :id, :name, include_blank: true  %></p></td>
+        </tr>
+        <tr>
+            <td><p><%=f.label "Image" %></p></td>
+            <td><p><%= f.file_field "image" %></p></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><p><%=submit_tag "Save" %></p></td>
+        </tr>
+    </table>
+<%end%>
 
 

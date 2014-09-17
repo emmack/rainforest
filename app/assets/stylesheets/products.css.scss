@@ -2,55 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+.rating {
+	text-align: center;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
 .cover_img {
-width: 100%;
-margin-top: 100px;
-z-index: -100;
+	width: 100%;
+	margin-top: 100px;
+	z-index: -100;
 }
 
 .back_link{
 	text-align: center;
-	font-family: "Avenir-Medium"
+	font-family: "neou"
 	
 }
 
 
-.product {
-	
-}
 .product_img{
 	float: left;
-margin-left: 0px;
-margin-right: 0px;
-width: 400px;
-height: auto;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 400px;
+	height: auto;
 }
 
 .product_info{
-	
-margin-left: 0px;
-margin-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .product_options{
-	
-margin-left: 0px;
-margin-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 
 
 img {
-width: 60%;
+	width: 60%;
 }
 
 .header {
 	text-align:center;
-	font-family: "Peach Milk";
+	font-family: "neou";
 	font-size: 100px;
 	margin:0px;
-
 }
 
 
@@ -59,14 +59,14 @@ width: 60%;
 .log_in {
 	position:relative;
 	text-align: right;
-	font-family: "peach milk";
+	font-family: "neou";
 	font-size: 30px;
 }
 
 .new {
 	position: absolute;
-right: 10px;
-left: 0;
+	right: 10px;
+	left: 0;
 }
 
 a {
@@ -74,20 +74,18 @@ a {
 
 }
 a:visited {
-color: rgba(88, 88, 88, 1);
+	color: rgba(88, 88, 88, 1);
 }
 
 .gridwrapper {
-overflow: hidden;
-/* margin: 10px; */
-margin-top: 20px;
-background-color: rgba(255, 255, 255, 0.1);
-padding: 20px;
-/* border-radius: 50px; */
-max-width: 1275px;
-margin-right: auto;
-margin-left: auto;
-	}
+	overflow: hidden;
+	margin-top: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 20px;
+	max-width: 1275px;
+	margin-right: auto;
+	margin-left: auto;
+}
 
 .tile{
 	float:left;
@@ -103,21 +101,20 @@ margin-left: auto;
      top: 10px;
      bottom: 10px;
      overflow: hidden;
+     font-family: 'neou';
 
 }
 
 .tileInner image_link {
       width: 100%;
-    }
+}
 .tileInner img {
 	width: 200px;
 }
 
 .thumbnail {
-	
 	width: 200px;
 	height: 200px;
-
 	margin: 10px;
 	padding: 0px;
 }
@@ -125,50 +122,38 @@ margin-left: auto;
 
 h1{
 
-	font-family: "couture";
-font-size: 30px;
-text-align: center;
-
-color:#667618;
-margin-top: 25px;
-margin-bottom: 25px; 
+	font-family: "hipster script pro";
+	font-size: 30px;
+	text-align: center;
+	color:#667618;
+	margin-top: 25px;
+	margin-bottom: 25px; 
 }
 
 
 p{
-font-family: "Avenir-Medium";
-font-size: 18px;
-text-align: left;
-color: #667618;
-
+	font-family: "neou";
+	font-size: 18px;
+	text-align: left;
+	color: #667618;
 }
 
 form{
-width: 600px;
-margin-left: auto;
-margin-right: auto;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .editing {
 	width: 600px;
-padding-left: 171px;
-padding-right: 0px;
+	padding-left: 171px;
+	padding-right: 0px;
 }
 
 .input{
 	width: 158px;
 }
 
-.picture {
-  /* off by default */
-  .unlike { display: none; }
-}
-
-/* when the post is favorited show the unfavorite button instead */
-.picture.liked {
-  .like { display: none; }
-  .unlike { display: inline-block; }
-}
 
 .rating_form{
 	width:100%;
