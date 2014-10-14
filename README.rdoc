@@ -1,4 +1,5 @@
-== README
+Bitmaker Labs assignment: Create a kickstarter copy.
+
 Learning Goals:
 
 Rails
