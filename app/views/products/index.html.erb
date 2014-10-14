@@ -1,18 +1,8 @@
-
-<h1> Top Rated Products </h1> 
-<div class="gridwrapper">
-<% @products.each do |product|}%>
-        <% @avg_rating = product.ratings.average(:rating) %>
-            <% unless @avg_rating < 3 %>
-                <div class="tile">
-                    <div class="tileinner">
-                        <%= link_to image_tag(product.image), "/products/#{product.id}" %>
-                        <div class = "rating"> 
-                        <p>Rating: <%=@avg_rating.round()%>/5</p>
-                        </div>
-                    </div>
-                </div>
-            <%end%>
-            <%end%>
+<div id="products">
+  <%= render @products %>
 </div>
 
+
+<div id="page">
+<%= paginate @products %>
+</div>

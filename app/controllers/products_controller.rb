@@ -5,8 +5,8 @@ class ProductsController < ApplicationController
     end
 
     def search 
-        @products = if params[:search]
-            Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%").page(params[:page])
+        @products = if params[:term]
+            Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:term]}%").page(params[:page])
         else
             Product.order('products.created_at DESC').page(params[:page])
         end
@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
             format.js
         end
     end
-    
+
     def show
         @product = Product.find(params[:id])
         if current_user

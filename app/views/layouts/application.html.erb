@@ -33,7 +33,7 @@
             <div class ="nav">
                 <%= link_to "Home", "/" %>  <%= link_to "New Product", "/products/new" %>  <%= link_to "Categories", "/categories/" %> 
 
-                <%=form_tag search_products_path, method: :get, authentication: false, id:'search-form' do %>
+                <%= form_tag products_path, method: :get, authentication: false, id:'search-form' do %>
                     <%=text_field_tag :search, params[:search]%>
                     <%= submit_tag 'Search'%>
                 <%end%>

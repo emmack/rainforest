@@ -9,10 +9,9 @@ root :to => "products#index"
   resources :sessions, only: [:new, :create, :destroy]
 
 
+
   resources :products do
- collection do
-    get 'search'
-  end
+    get 'search/:term' => 'products#search', on: :collection, :as => :search
     resources :reviews, only: [:show, :create, :destroy]
     resources :ratings, only: [:index, :show, :create, :destroy]
 
